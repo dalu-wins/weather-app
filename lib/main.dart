@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 import 'weather_handler.dart';
 
@@ -90,6 +91,13 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+          statusBarIconBrightness: Brightness.dark,
+          systemNavigationBarColor: Theme.of(context).colorScheme.background,
+          statusBarColor: Theme.of(context).colorScheme.background),
+    );
+
     return Scaffold(
       body: configBody(),
       floatingActionButton: configFAB(),

@@ -1,8 +1,12 @@
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:weather/weather.dart';
+import 'package:weather_app/api_key_secret.dart';
 
 class WeatherHandler {
-  static Future<(String, int, String)> getWeather() async {
+  WeatherFactory wf = WeatherFactory(APIKey.key);
+
+  Future<(String, int, String)> getWeather() async {
     permissionCheck(); // Handling permission dialouges
 
     // Default values
@@ -26,12 +30,15 @@ class WeatherHandler {
       Future.error("Parsing city from coordinates failed.");
     }
 
-    // TODO: OpenWeather API call here
+    // OpenWeather API call here
+    Weather w = await wf.currentWeatherByLocation(
+        position.latitude, position.longitude);
+    temp = w.temperature!.celsius!.round();
 
     return (city, temp, condition);
   }
 
-  static Future<void> permissionCheck() async {
+  Future<void> permissionCheck() async {
     bool serviceEnabled;
     LocationPermission permission;
 

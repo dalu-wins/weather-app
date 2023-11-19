@@ -32,11 +32,12 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  WeatherHandler weatherHandler = WeatherHandler();
   int _temp = 0;
   String _city = "San Francisco";
 
   Future<void> _locate() async {
-    var (city, temp, condition) = await WeatherHandler.getWeather();
+    var (city, temp, condition) = await weatherHandler.getWeather();
     setState(() {
       _city = city;
       _temp = temp;

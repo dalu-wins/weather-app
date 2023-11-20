@@ -23,7 +23,12 @@ class MyHomePageState extends State<MyHomePage> {
 
   FloatingActionButton buildFAB() {
     return FloatingActionButton(
-      child: const Icon(Icons.location_on),
+      backgroundColor: Theme.of(context).primaryColor,
+      elevation: 5,
+      child: Icon(
+        Icons.location_on,
+        color: Theme.of(context).colorScheme.background,
+      ),
       onPressed: () => {updateWeatherInfo()},
     );
   }
@@ -73,9 +78,12 @@ class MyHomePageState extends State<MyHomePage> {
               children: [
                 Align(
                   alignment: Alignment.topLeft,
-                  child: Text(
-                    "$_temp°C",
-                    style: TextStyle(fontSize: 18),
+                  child: Padding(
+                    padding: EdgeInsets.all(16),
+                    child: Text(
+                      "$_temp°C",
+                      style: TextStyle(fontSize: 22),
+                    ),
                   ),
                 ),
                 _condition,

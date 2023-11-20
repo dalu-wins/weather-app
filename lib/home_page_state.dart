@@ -58,7 +58,7 @@ class MyHomePageState extends State<MyHomePage> {
             )
           ],
           flexibleSpace: FlexibleSpaceBar(
-            titlePadding: EdgeInsets.all(16),
+            titlePadding: const EdgeInsets.symmetric(horizontal: 16),
             centerTitle: false,
             collapseMode: CollapseMode.none,
             title: Text(
@@ -73,20 +73,20 @@ class MyHomePageState extends State<MyHomePage> {
           hasScrollBody: false,
           fillOverscroll: true,
           child: Padding(
-            padding: const EdgeInsets.all(16.0),
+            padding: const EdgeInsets.only(left: 18, right: 18, top: 16),
             child: Column(
               children: [
                 Align(
                   alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: EdgeInsets.all(16),
-                    child: Text(
-                      "$_temp°C",
-                      style: TextStyle(fontSize: 22),
-                    ),
+                  child: Text(
+                    "$_temp°C",
+                    style: const TextStyle(fontSize: 22),
                   ),
                 ),
-                _condition,
+                Padding(
+                  padding: const EdgeInsets.all(32),
+                  child: _condition,
+                ),
               ],
             ),
           ),

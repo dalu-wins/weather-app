@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:lottie/lottie.dart';
 import 'package:weather_app/animation_handler.dart';
 import 'package:weather_app/home_page.dart';
@@ -17,9 +16,6 @@ class MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
-        systemNavigationBarColor: Colors.transparent));
-
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
@@ -71,7 +67,7 @@ class MyHomePageState extends State<MyHomePage> {
             )
           ],
           flexibleSpace: FlexibleSpaceBar(
-            titlePadding: const EdgeInsets.only(left: 16, right: 16, bottom: 8),
+            titlePadding: const EdgeInsets.only(left: 32, right: 32, bottom: 8),
             centerTitle: false,
             collapseMode: CollapseMode.none,
             title: Text(
@@ -86,7 +82,7 @@ class MyHomePageState extends State<MyHomePage> {
           hasScrollBody: true,
           fillOverscroll: true,
           child: Padding(
-            padding: const EdgeInsets.only(left: 18, right: 18),
+            padding: const EdgeInsets.symmetric(horizontal: 32),
             child: Column(
               children: [
                 Align(
@@ -111,7 +107,7 @@ class MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(32),
+                  padding: const EdgeInsets.all(16),
                   child: _conditionAnimation,
                 ),
               ],

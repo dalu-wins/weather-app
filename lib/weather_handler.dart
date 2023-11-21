@@ -7,8 +7,6 @@ class WeatherHandler {
   WeatherFactory wf = WeatherFactory(APIKey.key, language: Language.ENGLISH);
 
   Future<(String, Weather)> getWeather() async {
-    permissionCheck(); // Handling permission dialouges
-
     // Default values
     String city = "San Francisco";
 

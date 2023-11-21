@@ -16,9 +16,12 @@ class MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    weatherHandler.permissionCheck();
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         body: buildBody(context),
         floatingActionButton: buildFAB(),
       ),
@@ -27,7 +30,7 @@ class MyHomePageState extends State<MyHomePage> {
 
   FloatingActionButton buildFAB() {
     return FloatingActionButton(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Theme.of(context).colorScheme.primary,
       elevation: 5,
       child: Icon(
         Icons.location_on,
@@ -55,6 +58,7 @@ class MyHomePageState extends State<MyHomePage> {
       slivers: <Widget>[
         SliverAppBar.large(
           pinned: true,
+          backgroundColor: Theme.of(context).colorScheme.background,
           surfaceTintColor: Colors.transparent,
           actions: [
             IconButton(
@@ -93,14 +97,27 @@ class MyHomePageState extends State<MyHomePage> {
                         padding: const EdgeInsets.only(right: 16),
                         child: Text(
                           "$_temp°",
-                          style: const TextStyle(fontSize: 32),
+                          style: TextStyle(
+                              fontSize: 32,
+                              color:
+                                  Theme.of(context).colorScheme.onBackground),
                         ),
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("$_tempMin° / $_tempMax°"),
-                          Text(_condition),
+                          Text(
+                            "$_tempMin° / $_tempMax°",
+                            style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground),
+                          ),
+                          Text(
+                            _condition,
+                            style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground),
+                          ),
                         ],
                       ),
                     ],

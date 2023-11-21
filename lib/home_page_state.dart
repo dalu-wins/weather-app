@@ -60,16 +60,6 @@ class MyHomePageState extends State<MyHomePage> {
           pinned: true,
           backgroundColor: Theme.of(context).colorScheme.background,
           surfaceTintColor: Colors.transparent,
-          actions: [
-            IconButton(
-              icon: const Icon(
-                Icons.more_vert,
-              ),
-              onPressed: () {
-                // do something
-              },
-            )
-          ],
           flexibleSpace: FlexibleSpaceBar(
             titlePadding: const EdgeInsets.only(left: 32, right: 32, bottom: 8),
             centerTitle: false,

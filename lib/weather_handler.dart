@@ -6,7 +6,7 @@ import 'package:weather_app/api_key_secret.dart';
 class WeatherHandler {
   WeatherFactory wf = WeatherFactory(APIKey.key, language: Language.ENGLISH);
 
-  Future<(String, Weather)> getWeather() async {
+  Future<(String, Weather, List<Weather>)> getWeather() async {
     // Default values
     String city = "San Francisco";
 
@@ -26,13 +26,18 @@ class WeatherHandler {
       Future.error("Parsing city from coordinates failed.");
     }
 
-    // OpenWeather API call
+    // OpenWeather API calls
     Weather weather = await wf.currentWeatherByLocation(
       position.latitude,
       position.longitude,
     );
 
-    return (city, weather);
+    List<Weather> forecast = await wf.fiveDayForecastByLocation(
+      position.latitude,
+      position.longitude,
+    );
+
+    return (city, weather, forecast);
   }
 
   Future<void> permissionCheck() async {

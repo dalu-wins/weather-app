@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
-import 'package:weather_app/animation_handler.dart';
-import 'package:weather_app/forecast_wrapper.dart';
-import 'package:weather_app/home_page.dart';
-import 'package:weather_app/weather_handler.dart';
+import 'package:weather_app/ui/animation_handler.dart';
+import 'package:weather_app/weather/forecast_wrapper.dart';
+import 'package:weather_app/ui/home_page.dart';
+import 'package:weather_app/weather/weather_handler.dart';
 
 class MyHomePageState extends State<MyHomePage> {
   final WeatherHandler weatherHandler = WeatherHandler();

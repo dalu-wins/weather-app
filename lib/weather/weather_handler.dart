@@ -1,7 +1,7 @@
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weather/weather.dart';
-import 'package:weather_app/api_key_secret.dart';
+import 'package:weather_app/weather/api_key_secret.dart';
 
 class WeatherHandler {
   WeatherFactory wf = WeatherFactory(APIKey.key, language: Language.ENGLISH);

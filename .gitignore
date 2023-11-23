@@ -41,4 +41,4 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
-lib/weather/api_key_secret.dart
+lib/data/api_key_secret.dart

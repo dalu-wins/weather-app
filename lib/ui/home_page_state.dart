@@ -3,13 +3,11 @@ import 'package:intl/intl.dart';
 import 'package:weather_app/data/permissions.dart';
 import 'package:weather_app/ui/home_page.dart';
 import 'package:weather_app/data/weather.dart';
-import 'package:weather_app/ui/widgets/fab.dart';
 import 'package:weather_app/ui/widgets/content.dart';
 
 class MyHomePageState extends State<MyHomePage> {
   final WeatherHandler weatherHandler = WeatherHandler();
   final MainContent mainContent = MainContent();
-  final CustomFAB customFAB = CustomFAB();
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +18,6 @@ class MyHomePageState extends State<MyHomePage> {
       home: Scaffold(
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         body: mainContent.build(this),
-        floatingActionButton: customFAB.build(this),
       ),
     );
   }

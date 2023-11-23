@@ -35,26 +35,32 @@ class MainContent {
   CustomScrollView build(MyHomePageState homepage) {
     return CustomScrollView(
       slivers: <Widget>[
-        appBar(homepage.context),
+        appBar(homepage),
         body(homepage.context),
       ],
     );
   }
 
-  SliverAppBar appBar(BuildContext context) {
+  SliverAppBar appBar(MyHomePageState homepage) {
     return SliverAppBar.large(
       pinned: true,
       toolbarHeight: 80,
       collapsedHeight: 80,
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(homepage.context).colorScheme.background,
       surfaceTintColor: Colors.transparent,
       flexibleSpace: FlexibleSpaceBar(
         titlePadding: const EdgeInsets.only(left: 32, right: 32, bottom: 8),
         centerTitle: false,
         expandedTitleScale: 1.4,
         collapseMode: CollapseMode.none,
-        title: showCurrentTemperatureAndCity(context),
+        title: showCurrentTemperatureAndCity(homepage.context),
       ),
+      actions: [
+        IconButton(
+          onPressed: homepage.updateWeatherInfo,
+          icon: const Icon(Icons.location_on),
+        ),
+      ],
     );
   }
 
@@ -180,7 +186,7 @@ class MainContent {
         Padding(
           padding: const EdgeInsets.only(
             top: 12,
-            bottom: 128,
+            bottom: 12,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

@@ -192,6 +192,7 @@ class MainContent {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
                     height: 32,
@@ -231,6 +232,7 @@ class MainContent {
                 ],
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
                     height: 32,
@@ -280,6 +282,7 @@ class MainContent {
                 ],
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   SizedBox(
                     height: 32,
@@ -329,6 +332,7 @@ class MainContent {
                 ],
               ),
               Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(
                     height: 32,

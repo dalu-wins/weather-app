@@ -158,18 +158,34 @@ class MyHomePageState extends State<MyHomePage> {
                         children: [
                           Text(
                             "$_sunrise",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Theme.of(context).colorScheme.onBackground,
+                            ),
                           ),
-                          Text("sunrise"),
+                          Text(
+                            "sunrise",
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onBackground,
+                            ),
+                          ),
                         ],
                       ),
                       Column(
                         children: [
                           Text(
                             "$_sunset",
-                            style: TextStyle(fontSize: 20),
+                            style: TextStyle(
+                              fontSize: 20,
+                              color: Theme.of(context).colorScheme.onBackground,
+                            ),
                           ),
-                          Text("sunset"),
+                          Text(
+                            "sunset",
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onBackground,
+                            ),
+                          ),
                         ],
                       ),
                     ],
@@ -181,27 +197,127 @@ class MyHomePageState extends State<MyHomePage> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(_forecastTime_0),
-                          Text(_forecastTime_1),
-                          Text(_forecastTime_2),
+                          SizedBox(
+                            height: 32,
+                            child: AnimationHandler.getConditionAnimation(
+                                _forecastCondition_0,
+                                animated: false),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: AnimationHandler.getConditionAnimation(
+                                _forecastCondition_1,
+                                animated: false),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: AnimationHandler.getConditionAnimation(
+                                _forecastCondition_2,
+                                animated: false),
+                          ),
                         ],
                       ),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(_forecastTemp_0),
-                          Text(_forecastTemp_1),
-                          Text(_forecastTemp_2),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastTime_0,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastTime_1,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastTime_2,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(_forecastCondition_0),
-                          Text(_forecastCondition_1),
-                          Text(_forecastCondition_2),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastTemp_0,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastTemp_0,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastTemp_2,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastCondition_0,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastCondition_1,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                            height: 32,
+                            child: Text(
+                              _forecastCondition_2,
+                              style: TextStyle(
+                                color:
+                                    Theme.of(context).colorScheme.onBackground,
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                     ],

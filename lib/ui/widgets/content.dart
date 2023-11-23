@@ -119,7 +119,7 @@ class MainContent {
 
   Padding showAnimation() {
     return Padding(
-      padding: const EdgeInsets.only(top: 16, bottom: 16),
+      padding: const EdgeInsets.only(top: 32, bottom: 32),
       child: AnimationHandler.getConditionAnimation(condition),
     );
   }
@@ -175,18 +175,21 @@ class MainContent {
   Column showForecast(BuildContext context) {
     return Column(
       children: [
-        const Align(
+        Align(
           alignment: Alignment.bottomLeft,
           child: Text(
             "FORECAST",
             textAlign: TextAlign.left,
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onBackground,
+              fontWeight: FontWeight.bold,
+            ),
           ),
         ),
         Padding(
           padding: const EdgeInsets.only(
             top: 12,
-            bottom: 12,
+            bottom: 32,
           ),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

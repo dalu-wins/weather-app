@@ -25,7 +25,7 @@ To use the application, follow these steps:
 
 The application has been tested on the Android platform. Customization for usage on other platforms may be required.
 
-## Attribution
+## Credits
 
 The warning Lottie animation was crafted by [Ashleyy🍙](https://lottiefiles.com/ashleycmy).<br>
 All other Lottie animations were created by [Tlife](https://lottiefiles.com/rkyy33389gmail.com).

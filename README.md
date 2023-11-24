@@ -1,22 +1,33 @@
-# Weather
+# Simple Weather App
 
-A simple weather app coded with flutter.
+This Flutter-based application offers a convenient way to access weather information with a user-friendly interface.
 
 ## Getting Started
 
-First create an [OpenWeatherMap](https://openweathermap.org/) account. Here is why:
-- It will automatically provide you with your own API key which you can then find [here](https://home.openweathermap.org/api_keys)
-- Insert the key in the empty string field in [lib/data/api_key_secret.dart](lib/data/api_key_secret.dart)
-- Now you are ready to build and run the project!
+To use the application, follow these steps:
 
-```
-flutter pub get
-flutter run
-```
+1. Create an account on [OpenWeatherMap](https://openweathermap.org/) to obtain your unique API key. Find your API key [here](https://home.openweathermap.org/api_keys).
+2. Insert the obtained API key into the designated field within [lib/data/api_key_secret.dart](lib/data/api_key_secret.dart).
+3. Execute the following commands to build and run the project:
+
+    ```bash
+    flutter pub get
+    flutter run
+    ```
+
+## Screenshots
+<div style="display: flex; justify-content: space-around;">
+  <img src="assets/screenshots/screenshot.png" alt="Light Mode Screenshot" width="48%">
+  <img src="assets/screenshots/screenshot1.png" alt="Dark Mode Screenshot" width="48%">
+</div>
 
 ## Supported Devices
 
-Only tested on Android. If you want to use the app on another platform you might have to implement the required location permission yourself.
+The application has been tested on the Android platform. Customization for usage on other platforms may be required.
 
-## Screenshot
-<img src="assets/screenshots/screenshot.png" alt="Screenshot" width="400">
+## Attribution
+
+The warning Lottie animation was crafted by [Ashleyy🍙](https://lottiefiles.com/ashleycmy).<br>
+All other Lottie animations were created by [Tlife](https://lottiefiles.com/rkyy33389gmail.com).
+
+Feel free to contribute or report issues! 😉

@@ -1,16 +1,13 @@
-# weather_app
+# Weather
 
-A new Flutter project.
+A simple weather app project coded with flutter.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To use the app you have to go to OpenWeatherMap and create an account. It will automatically provide you with an API key.
+Then insert the key in the empty Sting field in lib/data/api_key_secret.dart.
+If you have done that, you are ready to go!
 
-A few resources to get you started if this is your first Flutter project:
+## Supported Devices
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Only tested on Android. If you want to use the app on another platform you might have to include the required permission configurations yourself.

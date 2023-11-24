@@ -30,6 +30,7 @@ class MyHomePageState extends State<MyHomePage> {
       mainContent.temperature = "${weather.temperature!.celsius!.round()}°";
       mainContent.tempMin = "${weather.tempMin!.celsius!.round()}°";
       mainContent.tempMax = "${weather.tempMax!.celsius!.round()}°";
+      mainContent.condition = weather.weatherMain!.toLowerCase();
 
       mainContent.sunrise = DateFormat("HH:MM").format(weather.sunrise!);
       mainContent.sunset = DateFormat("HH:MM").format(weather.sunset!);

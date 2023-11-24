@@ -12,25 +12,25 @@ class MainContent {
   String sunrise = "06:00";
   String sunset = "18:00";
 
-  String forecastTime0 = "--:--";
-  String forecastTemperature0 = "-°";
-  String forecastCondition0 = "undefined";
+  String forecastTime0 = "09:00";
+  String forecastTemperature0 = "20°";
+  String forecastCondition0 = "clear";
 
-  String forecastTime1 = "--:--";
-  String forecastTemperature1 = "-°";
-  String forecastCondition1 = "undefined";
+  String forecastTime1 = "12:00";
+  String forecastTemperature1 = "22°";
+  String forecastCondition1 = "clouds";
 
-  String forecastTime2 = "--:--";
-  String forecastTemperature2 = "-°";
-  String forecastCondition2 = "undefined";
+  String forecastTime2 = "15:00";
+  String forecastTemperature2 = "19°";
+  String forecastCondition2 = "rain";
 
-  String forecastTime3 = "--:--";
-  String forecastTemperature3 = "-°";
-  String forecastCondition3 = "undefined";
+  String forecastTime3 = "18:00";
+  String forecastTemperature3 = "17°";
+  String forecastCondition3 = "snow";
 
-  String forecastTime4 = "--:--";
-  String forecastTemperature4 = "-°";
-  String forecastCondition4 = "undefined";
+  String forecastTime4 = "21:00";
+  String forecastTemperature4 = "15°";
+  String forecastCondition4 = "tornado";
 
   CustomScrollView build(MyHomePageState homepage) {
     return CustomScrollView(

@@ -1,8 +1,15 @@
-# Simple Weather App
+# Features
+- Animated weather at your location
+- Sunrise and sunset times
+- 12h forecast data in 3h steps
 
-This Flutter-based application offers a convenient way to access weather information with a user-friendly interface.
+# Preview
+<div style="display: flex; justify-content: space-around;">
+  <img src="assets/screenshots/screenshot_light.png" alt="Light mode" width="49%">
+  <img src="assets/screenshots/screenshot_dark.png" alt="Dark mode" width="49%">
+</div>
 
-## Getting Started
+# Getting Started
 
 To use the application, follow these steps:
 
@@ -12,22 +19,11 @@ To use the application, follow these steps:
 
     ```bash
     flutter pub get
+    ```
+    ```bash
     flutter run
     ```
 
-## Screenshots
-<div style="display: flex; justify-content: space-around;">
-  <img src="assets/screenshots/screenshot_light.png" alt="Light mode" width="48%">
-  <img src="assets/screenshots/screenshot_dark.png" alt="Dark mode" width="48%">
-</div>
-
-## Supported Devices
-
-The application has been tested on the Android platform. Customization for usage on other platforms may be required.
-
-## Credits
-
+# Credits
 The warning Lottie animation was crafted by [Ashleyy🍙](https://lottiefiles.com/ashleycmy).<br>
 All other Lottie animations were created by [Tlife](https://lottiefiles.com/rkyy33389gmail.com).
-
-Feel free to contribute or report issues! 😉

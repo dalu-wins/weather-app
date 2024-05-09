@@ -17,8 +17,8 @@ To use the application, follow these steps:
 
 ## Screenshots
 <div style="display: flex; justify-content: space-around;">
-  <img src="assets/screenshots/screenshot.png" alt="Light Mode Screenshot" width="48%">
-  <img src="assets/screenshots/screenshot1.png" alt="Dark Mode Screenshot" width="48%">
+  <img src="assets/screenshots/screenshot_light.png" alt="Light mode" width="48%">
+  <img src="assets/screenshots/screenshot_dark.png" alt="Dark mode" width="48%">
 </div>
 
 ## Supported Devices
